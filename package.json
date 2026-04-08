@@ -1,0 +1,18 @@
+{
+  "name": "astrovgyan",
+  "version": "1.0.0",
+  "description": "Premium Astrology Consultation Website",
+  "main": "index.html",
+  "scripts": {
+    "lint:html": "htmlhint '**/*.html'",
+    "lint:css": "stylelint 'css/**/*.css'",
+    "lint": "npm run lint:html && npm run lint:css",
+    "test:local": "npm run lint && echo 'Linting passed! Run Lighthouse on your production URL via GitHub Actions for the final check.'",
+    "test": "echo \"Error: no test specified\" && exit 0"
+  },
+  "devDependencies": {
+    "htmlhint": "^1.1.4",
+    "stylelint": "^16.2.1",
+    "stylelint-config-standard": "^36.0.0"
+  }
+}

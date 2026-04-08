@@ -2,33 +2,31 @@
 :root {
     --bg-dark: #0f1015;
     --bg-card: #1c1d24;
-    --star-c1: #ffffff;
-    --star-c2: rgba(230, 200, 150, 0.8);
-    --star-c3: rgba(223, 181, 114, 0.9);
+    --star-c1: #fff;
+    --star-c2: rgb(230 200 150 / 80%);
+    --star-c3: rgb(223 181 114 / 90%);
     --bg-card-hover: #262730;
-    --text-primary: #ffffff;
+    --text-primary: #fff;
     --text-secondary: #b0b3c0;
     --gold-primary: #e6c587;
     --gold-hover: #f3d79f;
-    --border-color: rgba(255, 255, 255, 0.08);
-
+    --border-color: rgb(255 255 255 / 8%);
     --font-heading: 'Playfair Display', serif;
     --font-body: 'Inter', sans-serif;
     --font-brand: 'Cinzel', serif;
-
     --transition: all 0.3s ease;
 }
 
 :root.light-theme {
     --bg-dark: #f2f4f7;
-    --bg-card: #ffffff;
+    --bg-card: #fff;
     --star-c1: #dfb572;
     --star-c2: #d2a450;
     --star-c3: #ff9d00;
     --bg-card-hover: #fafbfc;
     --text-primary: #050608;
     --text-secondary: #3b4054;
-    --border-color: rgba(0, 0, 0, 0.15);
+    --border-color: rgb(0 0 0 / 15%);
 }
 
 * {
@@ -129,24 +127,24 @@ p {
     background-color: var(--gold-primary);
     color: #111216;
     font-weight: 600;
-    box-shadow: 0 4px 15px rgba(223, 181, 114, 0.2);
+    box-shadow: 0 4px 15px rgb(223 181 114 / 20%);
 }
 
 .btn-primary:hover {
     background-color: var(--gold-hover);
     transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(223, 181, 114, 0.4);
+    box-shadow: 0 6px 20px rgb(223 181 114 / 40%);
 }
 
 .btn-secondary {
     background-color: transparent;
     color: var(--text-primary);
-    border: 1px solid rgba(255, 255, 255, 0.3);
+    border: 1px solid rgb(255 255 255 / 30%);
 }
 
 .btn-secondary:hover {
     border-color: var(--text-primary);
-    background-color: rgba(255, 255, 255, 0.05);
+    background-color: rgb(255 255 255 / 5%);
 }
 
 .icon-btn {
@@ -166,7 +164,7 @@ p {
     width: 100%;
     padding: 1.2rem 0;
     z-index: 1000;
-    background: rgba(15, 16, 21, 0.85);
+    background: rgb(15 16 21 / 85%);
     backdrop-filter: blur(12px);
     border-bottom: 1px solid var(--border-color);
 }
@@ -231,10 +229,9 @@ p {
 .shloka-ticker {
     margin-top: 75px; /* Offset for fixed navbar */
     width: 100%;
-    background: rgba(15, 16, 21, 0.7);
+    background: rgb(15 16 21 / 70%);
     backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    border-bottom: 1px solid rgba(230, 197, 135, 0.15);
+    border-bottom: 1px solid rgb(230 197 135 / 15%);
     padding: 12px 0;
     overflow: hidden;
     white-space: nowrap;
@@ -267,16 +264,16 @@ p {
 }
 
 :root.light-theme .shloka-ticker {
-    background: rgba(255, 255, 255, 0.9);
-    border-bottom: 2px solid rgba(230, 197, 135, 0.4);
-    box-shadow: 0 4px 25px rgba(0, 0, 0, 0.08);
+    background: rgb(255 255 255 / 90%);
+    border-bottom: 2px solid rgb(230 197 135 / 40%);
+    box-shadow: 0 4px 25px rgb(0 0 0 / 8%);
 }
 
 :root.light-theme .shloka-verse {
     color: #8b6d31;
     font-size: 1.15rem;
     font-weight: 700;
-    text-shadow: 0 1px 2px rgba(255, 255, 255, 1);
+    text-shadow: 0 1px 2px rgb(255 255 255 / 100%);
 }
 
 /* ── Nav Dropdown ─────────────────────────────────────────── */
@@ -309,12 +306,14 @@ p {
     display: none;
     position: absolute;
     top: 100%;
+
     /* flush with toggle — no mouse-gap */
     left: 50%;
     transform: translateX(-50%);
     background: transparent;
     border: none;
     padding-top: 14px;
+
     /* visual gap lives here, inside the hover zone */
     min-width: 200px;
     z-index: 2000;
@@ -340,22 +339,21 @@ p {
 
 /* Inner card wrapping the menu items */
 .nav-dropdown-menu-inner {
-    background: rgba(18, 18, 22, 0.96);
-    border: 1px solid rgba(230, 197, 135, 0.2);
+    background: rgb(18 18 22 / 96%);
+    border: 1px solid rgb(230 197 135 / 20%);
     border-radius: 20px;
     padding: 12px;
-    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.7), 0 0 0 1px rgba(255, 255, 255, 0.05);
+    box-shadow: 0 25px 50px -12px rgb(0 0 0 / 70%), 0 0 0 1px rgb(255 255 255 / 5%);
     backdrop-filter: blur(30px);
-    -webkit-backdrop-filter: blur(30px);
     position: relative;
     animation: navddPopIn 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
     list-style: none;
 }
 
 :root.light-theme .nav-dropdown-menu-inner {
-    background: rgba(255, 255, 255, 0.95);
-    border: 1px solid rgba(230, 197, 135, 0.4);
-    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.1), 0 0 0 1px rgba(0, 0, 0, 0.05);
+    background: rgb(255 255 255 / 95%);
+    border: 1px solid rgb(230 197 135 / 40%);
+    box-shadow: 0 25px 50px -12px rgb(0 0 0 / 10%), 0 0 0 1px rgb(0 0 0 / 5%);
 }
 
 /* Arrow pip */
@@ -367,16 +365,16 @@ p {
     transform: translateX(-50%) rotate(45deg);
     width: 11px;
     height: 11px;
-    background: rgba(18, 18, 22, 0.97);
-    border-left: 1px solid rgba(230, 197, 135, 0.2);
-    border-top: 1px solid rgba(230, 197, 135, 0.2);
-    border-radius: 3px 0 0 0;
+    background: rgb(18 18 22 / 97%);
+    border-left: 1px solid rgb(230 197 135 / 20%);
+    border-top: 1px solid rgb(230 197 135 / 20%);
+    border-radius: 3px 0 0;
 }
 
 :root.light-theme .nav-dropdown-menu-inner::before {
-    background: rgba(255, 255, 255, 0.95);
-    border-left: 1px solid rgba(230, 197, 135, 0.4);
-    border-top: 1px solid rgba(230, 197, 135, 0.4);
+    background: rgb(255 255 255 / 95%);
+    border-left: 1px solid rgb(230 197 135 / 40%);
+    border-top: 1px solid rgb(230 197 135 / 40%);
 }
 
 .nav-dropdown-menu li a {
@@ -394,14 +392,14 @@ p {
 
 .nav-dropdown-menu li a:hover,
 .nav-dropdown-menu li a.active {
-    background: rgba(230, 197, 135, 0.1);
+    background: rgb(230 197 135 / 10%);
     color: var(--gold-primary);
     padding-left: 20px;
 }
 
 :root.light-theme .nav-dropdown-menu li a:hover,
 :root.light-theme .nav-dropdown-menu li a.active {
-    background: rgba(184, 134, 11, 0.1);
+    background: rgb(184 134 11 / 10%);
     color: #b8860b;
 }
 
@@ -417,8 +415,8 @@ p {
     align-items: center;
     gap: 10px;
     padding: 8px 18px 8px 12px;
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(230, 197, 135, 0.3);
+    background: rgb(255 255 255 / 5%);
+    border: 1px solid rgb(230 197 135 / 30%);
     border-radius: 50px;
     cursor: pointer;
     font-family: var(--font-body);
@@ -429,26 +427,25 @@ p {
     transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     white-space: nowrap;
     backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 15px rgb(0 0 0 / 10%);
 }
 
 :root.light-theme #i18n-btn {
-    background: rgba(0, 0, 0, 0.04);
-    border-color: rgba(230, 197, 135, 0.5);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    background: rgb(0 0 0 / 4%);
+    border-color: rgb(230 197 135 / 50%);
+    box-shadow: 0 4px 12px rgb(0 0 0 / 5%);
 }
 
 #i18n-btn:hover {
-    background: rgba(230, 197, 135, 0.15);
+    background: rgb(230 197 135 / 15%);
     border-color: var(--gold-secondary);
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2), 0 0 15px rgba(230, 197, 135, 0.2);
+    box-shadow: 0 6px 20px rgb(0 0 0 / 20%), 0 0 15px rgb(230 197 135 / 20%);
     transform: translateY(-2px);
 }
 
 #i18n-flag {
     font-size: 1.2rem;
-    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+    filter: drop-shadow(0 2px 4px rgb(0 0 0 / 30%));
     transition: transform 0.3s ease;
 }
 
@@ -477,23 +474,22 @@ p {
     position: absolute;
     top: calc(100% + 15px);
     right: 0;
-    background: rgba(18, 18, 22, 0.96);
-    border: 1px solid rgba(230, 197, 135, 0.2);
+    background: rgb(18 18 22 / 96%);
+    border: 1px solid rgb(230 197 135 / 20%);
     border-radius: 20px;
     padding: 12px;
     min-width: 190px;
-    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.7), 0 0 0 1px rgba(255, 255, 255, 0.05);
+    box-shadow: 0 25px 50px -12px rgb(0 0 0 / 70%), 0 0 0 1px rgb(255 255 255 / 5%);
     z-index: 2000;
     list-style: none;
     backdrop-filter: blur(30px);
-    -webkit-backdrop-filter: blur(30px);
     overflow: hidden;
 }
 
 :root.light-theme #i18n-dropdown {
-    background: rgba(255, 255, 255, 0.95);
-    border: 1px solid rgba(230, 197, 135, 0.4);
-    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.1), 0 0 0 1px rgba(0, 0, 0, 0.05);
+    background: rgb(255 255 255 / 95%);
+    border: 1px solid rgb(230 197 135 / 40%);
+    box-shadow: 0 25px 50px -12px rgb(0 0 0 / 10%), 0 0 0 1px rgb(0 0 0 / 5%);
 }
 
 #i18n-picker.open #i18n-dropdown {
@@ -522,17 +518,17 @@ p {
     right: 25px;
     width: 12px;
     height: 12px;
-    background: rgba(18, 18, 22, 0.96);
-    border-left: 1px solid rgba(230, 197, 135, 0.2);
-    border-top: 1px solid rgba(230, 197, 135, 0.2);
+    background: rgb(18 18 22 / 96%);
+    border-left: 1px solid rgb(230 197 135 / 20%);
+    border-top: 1px solid rgb(230 197 135 / 20%);
     transform: rotate(45deg);
-    border-radius: 3px 0 0 0;
+    border-radius: 3px 0 0;
 }
 
 :root.light-theme #i18n-dropdown::before {
-    background: rgba(255, 255, 255, 0.95);
-    border-left: 1px solid rgba(230, 197, 135, 0.4);
-    border-top: 1px solid rgba(230, 197, 135, 0.4);
+    background: rgb(255 255 255 / 95%);
+    border-left: 1px solid rgb(230 197 135 / 40%);
+    border-top: 1px solid rgb(230 197 135 / 40%);
 }
 
 .i18n-option {
@@ -570,18 +566,18 @@ p {
     height: 8px;
     border-radius: 50%;
     background: transparent;
-    border: 2px solid rgba(230, 197, 135, 0.2);
+    border: 2px solid rgb(230 197 135 / 20%);
     transition: all 0.3s ease;
 }
 
 .i18n-option:hover {
-    background: rgba(230, 197, 135, 0.1);
+    background: rgb(230 197 135 / 10%);
     color: var(--text-primary);
     transform: translateX(5px);
 }
 
 :root.light-theme .i18n-option:hover {
-    background: rgba(184, 134, 11, 0.1);
+    background: rgb(184 134 11 / 10%);
     color: #b8860b;
 }
 
@@ -590,7 +586,7 @@ p {
 }
 
 .i18n-option.active {
-    background: rgba(230, 197, 135, 0.15);
+    background: rgb(230 197 135 / 15%);
     color: var(--gold-primary);
     font-weight: 700;
 }
@@ -598,12 +594,12 @@ p {
 .i18n-option.active .i18n-option-check {
     background: var(--gold-primary);
     border-color: var(--gold-primary);
-    box-shadow: 0 0 12px rgba(230, 197, 135, 0.8);
+    box-shadow: 0 0 12px rgb(230 197 135 / 80%);
     transform: scale(1.2);
 }
 
 :root.light-theme .i18n-option.active {
-    background: rgba(184, 134, 11, 0.2);
+    background: rgb(184 134 11 / 20%);
     color: #b8860b;
 }
 
@@ -656,27 +652,24 @@ p {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(to bottom, rgba(15, 16, 21, 0.2) 0%, var(--bg-dark) 100%);
+    background: linear-gradient(to bottom, rgb(15 16 21 / 20%) 0%, var(--bg-dark) 100%);
 }
 
 .stars,
 .stars2 {
     position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
+    inset: 0;
     pointer-events: none;
 }
 
 .stars {
     background-image:
-        radial-gradient(2px 2px at 20px 30px, var(--star-c1), rgba(0, 0, 0, 0)),
-        radial-gradient(1.5px 1.5px at 40px 70px, var(--star-c1), rgba(0, 0, 0, 0)),
-        radial-gradient(2px 2px at 80px 160px, var(--star-c1), rgba(0, 0, 0, 0)),
-        radial-gradient(1.5px 1.5px at 90px 40px, var(--star-c1), rgba(0, 0, 0, 0)),
-        radial-gradient(2.5px 2.5px at 130px 80px, var(--star-c2), rgba(0, 0, 0, 0)),
-        radial-gradient(1.5px 1.5px at 160px 120px, var(--star-c1), rgba(0, 0, 0, 0));
+        radial-gradient(2px 2px at 20px 30px, var(--star-c1), rgb(0 0 0 / 0%)),
+        radial-gradient(1.5px 1.5px at 40px 70px, var(--star-c1), rgb(0 0 0 / 0%)),
+        radial-gradient(2px 2px at 80px 160px, var(--star-c1), rgb(0 0 0 / 0%)),
+        radial-gradient(1.5px 1.5px at 90px 40px, var(--star-c1), rgb(0 0 0 / 0%)),
+        radial-gradient(2.5px 2.5px at 130px 80px, var(--star-c2), rgb(0 0 0 / 0%)),
+        radial-gradient(1.5px 1.5px at 160px 120px, var(--star-c1), rgb(0 0 0 / 0%));
     background-repeat: repeat;
     background-size: 200px 200px;
     animation: starPan 50s linear infinite;
@@ -685,9 +678,9 @@ p {
 
 .stars2 {
     background-image:
-        radial-gradient(3px 3px at 10px 20px, var(--star-c3), rgba(0, 0, 0, 0)),
-        radial-gradient(2px 2px at 60px 50px, var(--star-c1), rgba(0, 0, 0, 0)),
-        radial-gradient(1.5px 1.5px at 120px 100px, var(--star-c1), rgba(0, 0, 0, 0));
+        radial-gradient(3px 3px at 10px 20px, var(--star-c3), rgb(0 0 0 / 0%)),
+        radial-gradient(2px 2px at 60px 50px, var(--star-c1), rgb(0 0 0 / 0%)),
+        radial-gradient(1.5px 1.5px at 120px 100px, var(--star-c1), rgb(0 0 0 / 0%));
     background-repeat: repeat;
     background-size: 350px 350px;
     animation: starPan 80s linear infinite;
@@ -717,27 +710,24 @@ p {
 /* Special White Starfield */
 .white-starfield {
     position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
+    inset: 0;
     background-image:
-        radial-gradient(1.5px 1.5px at 20px 10px, #ffffff, transparent),
-        radial-gradient(1px 1px at 60px 40px, rgba(255, 255, 255, 0.8), transparent),
-        radial-gradient(2px 2px at 130px 60px, #ffffff, transparent),
-        radial-gradient(1.5px 1.5px at 190px 120px, rgba(255, 255, 255, 0.9), transparent),
-        radial-gradient(1px 1px at 240px 80px, #ffffff, transparent),
-        radial-gradient(2px 2px at 290px 190px, rgba(255, 255, 255, 0.7), transparent),
-        radial-gradient(1.5px 1.5px at 330px 50px, #ffffff, transparent),
-        radial-gradient(1px 1px at 380px 240px, rgba(255, 255, 255, 0.8), transparent),
-        radial-gradient(2px 2px at 40px 270px, #ffffff, transparent),
-        radial-gradient(1.5px 1.5px at 90px 340px, rgba(255, 255, 255, 0.9), transparent),
-        radial-gradient(1px 1px at 160px 380px, #ffffff, transparent),
-        radial-gradient(2px 2px at 230px 310px, rgba(255, 255, 255, 0.7), transparent),
-        radial-gradient(1.5px 1.5px at 310px 360px, #ffffff, transparent),
-        radial-gradient(1px 1px at 370px 320px, rgba(255, 255, 255, 0.8), transparent),
-        radial-gradient(2px 2px at 80px 160px, #ffffff, transparent),
-        radial-gradient(1.5px 1.5px at 150px 220px, rgba(255, 255, 255, 0.6), transparent);
+        radial-gradient(1.5px 1.5px at 20px 10px, #fff, transparent),
+        radial-gradient(1px 1px at 60px 40px, rgb(255 255 255 / 80%), transparent),
+        radial-gradient(2px 2px at 130px 60px, #fff, transparent),
+        radial-gradient(1.5px 1.5px at 190px 120px, rgb(255 255 255 / 90%), transparent),
+        radial-gradient(1px 1px at 240px 80px, #fff, transparent),
+        radial-gradient(2px 2px at 290px 190px, rgb(255 255 255 / 70%), transparent),
+        radial-gradient(1.5px 1.5px at 330px 50px, #fff, transparent),
+        radial-gradient(1px 1px at 380px 240px, rgb(255 255 255 / 80%), transparent),
+        radial-gradient(2px 2px at 40px 270px, #fff, transparent),
+        radial-gradient(1.5px 1.5px at 90px 340px, rgb(255 255 255 / 90%), transparent),
+        radial-gradient(1px 1px at 160px 380px, #fff, transparent),
+        radial-gradient(2px 2px at 230px 310px, rgb(255 255 255 / 70%), transparent),
+        radial-gradient(1.5px 1.5px at 310px 360px, #fff, transparent),
+        radial-gradient(1px 1px at 370px 320px, rgb(255 255 255 / 80%), transparent),
+        radial-gradient(2px 2px at 80px 160px, #fff, transparent),
+        radial-gradient(1.5px 1.5px at 150px 220px, rgb(255 255 255 / 60%), transparent);
     background-size: 250px 250px;
     animation: drift 80s linear infinite;
     z-index: 1;
@@ -766,7 +756,7 @@ p {
     border-radius: 50%;
     animation: floatPlanet linear infinite;
     background: radial-gradient(circle at 30% 30%, var(--gold-primary), #111216);
-    box-shadow: inset -2px -2px 5px rgba(0, 0, 0, 0.6), 0 0 12px rgba(223, 181, 114, 0.3);
+    box-shadow: inset -2px -2px 5px rgb(0 0 0 / 60%), 0 0 12px rgb(223 181 114 / 30%);
 
     /* Magical Behaviours */
     pointer-events: auto;
@@ -779,18 +769,18 @@ p {
     animation-play-state: paused;
     scale: 2.2;
     filter: brightness(1.5) drop-shadow(0 0 15px var(--gold-primary)) drop-shadow(0 0 30px #a881fb);
-    box-shadow: inset -2px -2px 5px rgba(0, 0, 0, 0.6), 0 0 30px rgba(223, 181, 114, 1);
+    box-shadow: inset -2px -2px 5px rgb(0 0 0 / 60%), 0 0 30px rgb(223 181 114 / 100%);
     z-index: 10;
 }
 
 .planet:active {
     scale: 1.8;
-    filter: brightness(2) drop-shadow(0 0 25px #ffffff) drop-shadow(0 0 50px var(--gold-primary));
+    filter: brightness(2) drop-shadow(0 0 25px #fff) drop-shadow(0 0 50px var(--gold-primary));
 }
 
 :root.light-theme .planet {
     background: radial-gradient(circle at 30% 30%, var(--gold-primary), #a881fb);
-    box-shadow: inset -2px -2px 5px rgba(0, 0, 0, 0.2), 0 0 15px rgba(223, 181, 114, 0.4);
+    box-shadow: inset -2px -2px 5px rgb(0 0 0 / 20%), 0 0 15px rgb(223 181 114 / 40%);
 }
 
 .planet-1 {
@@ -1012,7 +1002,7 @@ p {
 
 @keyframes float {
     0% {
-        transform: translateY(0px);
+        transform: translateY(0);
     }
 
     50% {
@@ -1020,14 +1010,14 @@ p {
     }
 
     100% {
-        transform: translateY(0px);
+        transform: translateY(0);
     }
 }
 
 .image-wrapper img {
     width: 100%;
     border-radius: 12px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 1px solid rgb(255 255 255 / 10%);
 }
 
 .glow {
@@ -1037,7 +1027,7 @@ p {
     transform: translate(-50%, -50%);
     width: 120%;
     height: 120%;
-    background: radial-gradient(circle, rgba(230, 197, 135, 0.15) 0%, transparent 70%);
+    background: radial-gradient(circle, rgb(230 197 135 / 15%) 0%, transparent 70%);
     z-index: -1;
     filter: blur(40px);
 }
@@ -1045,7 +1035,7 @@ p {
 /* Founder Section */
 .founder-section {
     padding: 8rem 0;
-    background: linear-gradient(to bottom, var(--bg-dark), rgba(28, 29, 36, 0.6));
+    background: linear-gradient(to bottom, var(--bg-dark), rgb(28 29 36 / 60%));
     position: relative;
     overflow: hidden;
 }
@@ -1124,7 +1114,7 @@ p {
 }
 
 .handwritten-about p {
-    font-family: 'Caveat', cursive;
+    font-family: Caveat, cursive;
     font-size: 1.65rem;
     color: var(--text-primary);
     margin-bottom: 1.5rem;
@@ -1153,8 +1143,8 @@ p {
     position: relative;
     border-radius: 30px;
     overflow: hidden;
-    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.6);
-    border: 1px solid rgba(230, 197, 135, 0.3);
+    box-shadow: 0 30px 60px rgb(0 0 0 / 60%);
+    border: 1px solid rgb(230 197 135 / 30%);
     background: var(--bg-card);
 }
 
@@ -1175,13 +1165,13 @@ p {
     transform: translate(-50%, -50%);
     width: 140%;
     height: 140%;
-    background: radial-gradient(circle, rgba(230, 197, 135, 0.15) 0%, transparent 70%);
+    background: radial-gradient(circle, rgb(230 197 135 / 15%) 0%, transparent 70%);
     z-index: -1;
     filter: blur(60px);
     pointer-events: none;
 }
 
-@media (max-width: 992px) {
+@media (width <= 992px) {
     .founder-container {
         flex-direction: column;
         text-align: center;
@@ -1238,7 +1228,7 @@ p {
     font-family: var(--font-heading);
     font-size: 14rem;
     font-weight: 700;
-    color: rgba(255, 255, 255, 0.03);
+    color: rgb(255 255 255 / 3%);
     line-height: 1;
     z-index: 1;
 }
@@ -1265,7 +1255,7 @@ p {
     padding: 0;
     display: flex;
     flex-direction: column;
-    border: 1px solid rgba(223, 181, 114, 0.15);
+    border: 1px solid rgb(223 181 114 / 15%);
 }
 
 .insight-card.with-bg .insight-image {
@@ -1294,8 +1284,8 @@ p {
 .insight-card:hover {
     background-color: var(--bg-card-hover);
     transform: translateY(-5px);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
-    border-color: rgba(223, 181, 114, 0.4);
+    box-shadow: 0 10px 25px rgb(0 0 0 / 30%);
+    border-color: rgb(223 181 114 / 40%);
 }
 
 .insight-card .icon {
@@ -1319,7 +1309,7 @@ p {
     width: 60px;
     height: 2px;
     background-color: var(--gold-primary);
-    margin: 0 auto 3rem auto;
+    margin: 0 auto 3rem;
 }
 
 .carousel-container {
@@ -1335,6 +1325,7 @@ p {
     width: 100%;
     border-radius: 8px;
     padding: 30px 10px;
+
     /* Big vertical padding to let scaling look perfect */
 }
 
@@ -1377,6 +1368,7 @@ p {
 
 .zodiac-card {
     flex: 0 0 calc(25% - 1.125rem);
+
     /* Default 4 items */
     background-color: var(--bg-card);
     border: 1px solid var(--border-color);
@@ -1391,7 +1383,7 @@ p {
     opacity: 0.5;
     filter: grayscale(60%);
     transform: scale(0.95);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 5px 15px rgb(0 0 0 / 20%);
 }
 
 .zodiac-card::before {
@@ -1401,7 +1393,7 @@ p {
     left: 0;
     width: 100%;
     height: 100%;
-    background: radial-gradient(circle at 50% 0%, rgba(223, 181, 114, 0.15) 0%, transparent 60%);
+    background: radial-gradient(circle at 50% 0%, rgb(223 181 114 / 15%) 0%, transparent 60%);
     opacity: 0;
     transition: opacity 0.5s ease;
     border-radius: inherit;
@@ -1414,16 +1406,15 @@ p {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: rgba(255, 255, 255, 0.03);
+    background: rgb(255 255 255 / 3%);
     backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.08);
+    border: 1px solid rgb(255 255 255 / 8%);
     border-radius: 50%;
     font-size: 2.2rem;
     margin-bottom: 1.5rem;
     color: var(--text-secondary);
     transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2), inset 0 0 0 1px rgba(255, 255, 255, 0.05);
+    box-shadow: 0 4px 15px rgb(0 0 0 / 20%), inset 0 0 0 1px rgb(255 255 255 / 5%);
 }
 
 .zodiac-card h4 {
@@ -1447,8 +1438,8 @@ p {
     opacity: 0.9;
     filter: grayscale(10%);
     transform: scale(1.02);
-    border-color: rgba(223, 181, 114, 0.4);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    border-color: rgb(223 181 114 / 40%);
+    box-shadow: 0 10px 25px rgb(0 0 0 / 30%);
 }
 
 .zodiac-card.active {
@@ -1458,7 +1449,7 @@ p {
     z-index: 10;
     opacity: 1;
     filter: grayscale(0%);
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6), 0 0 25px rgba(223, 181, 114, 0.15);
+    box-shadow: 0 15px 40px rgb(0 0 0 / 60%), 0 0 25px rgb(223 181 114 / 15%);
 }
 
 .zodiac-card.active::before {
@@ -1466,9 +1457,9 @@ p {
 }
 
 .zodiac-card.active .icon {
-    background: rgba(223, 181, 114, 0.1);
-    border-color: rgba(223, 181, 114, 0.3);
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4), 0 0 20px rgba(223, 181, 114, 0.3);
+    background: rgb(223 181 114 / 10%);
+    border-color: rgb(223 181 114 / 30%);
+    box-shadow: 0 4px 20px rgb(0 0 0 / 40%), 0 0 20px rgb(223 181 114 / 30%);
     color: var(--gold-primary);
     transform: translateY(-8px);
 }
@@ -1484,7 +1475,7 @@ p {
 
 /* Footer */
 .footer {
-    padding: 5rem 0 2rem 0;
+    padding: 5rem 0 2rem;
     border-top: 1px solid var(--border-color);
     background-color: var(--bg-dark);
 }
@@ -1553,7 +1544,7 @@ p {
     color: var(--text-secondary);
     border: 1px solid var(--border-color);
     transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 4px 10px rgb(0 0 0 / 15%);
 }
 
 .social-icon-btn svg {
@@ -1566,7 +1557,7 @@ p {
     background-color: var(--gold-primary);
     color: var(--bg-dark) !important;
     transform: translateY(-5px) scale(1.05);
-    box-shadow: 0 10px 20px rgba(223, 181, 114, 0.3);
+    box-shadow: 0 10px 20px rgb(223 181 114 / 30%);
     border-color: var(--gold-primary);
 }
 
@@ -1575,15 +1566,15 @@ p {
 }
 
 :root.light-theme .social-icon-btn {
-    background-color: #ffffff;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
-    border-color: rgba(0, 0, 0, 0.08);
+    background-color: #fff;
+    box-shadow: 0 4px 15px rgb(0 0 0 / 6%);
+    border-color: rgb(0 0 0 / 8%);
 }
 
 :root.light-theme .social-icon-btn:hover {
     background: linear-gradient(135deg, #d4a34b 0%, #b8860b 100%);
-    box-shadow: 0 10px 25px rgba(184, 134, 11, 0.25);
-    color: #ffffff !important;
+    box-shadow: 0 10px 25px rgb(184 134 11 / 25%);
+    color: #fff !important;
     border-color: transparent;
 }
 
@@ -1592,7 +1583,7 @@ p {
     justify-content: space-between;
     align-items: center;
     padding-top: 2rem;
-    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    border-top: 1px solid rgb(255 255 255 / 5%);
 }
 
 .social-icons a {
@@ -1608,64 +1599,64 @@ p {
 /* Light Theme Specific Overrides */
 :root.light-theme .btn-primary {
     background: linear-gradient(135deg, #d4a34b 0%, #b8860b 100%);
-    color: #ffffff;
-    box-shadow: 0 6px 20px rgba(184, 134, 11, 0.3);
-    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+    color: #fff;
+    box-shadow: 0 6px 20px rgb(184 134 11 / 30%);
+    text-shadow: 0 1px 2px rgb(0 0 0 / 20%);
     border: none;
 }
 
 :root.light-theme .btn-primary:hover {
     transform: translateY(-3px);
-    box-shadow: 0 8px 25px rgba(184, 134, 11, 0.5);
+    box-shadow: 0 8px 25px rgb(184 134 11 / 50%);
 }
 
 :root.light-theme .btn-secondary {
-    border-color: rgba(0, 0, 0, 0.25);
+    border-color: rgb(0 0 0 / 25%);
     color: var(--text-primary);
-    background-color: rgba(255, 255, 255, 0.6);
+    background-color: rgb(255 255 255 / 60%);
     backdrop-filter: blur(4px);
 }
 
 :root.light-theme .btn-secondary:hover {
-    border-color: rgba(0, 0, 0, 0.8);
-    background-color: rgba(0, 0, 0, 0.05);
+    border-color: rgb(0 0 0 / 80%);
+    background-color: rgb(0 0 0 / 5%);
 }
 
 :root.light-theme .navbar {
-    background: rgba(242, 244, 247, 0.9);
+    background: rgb(242 244 247 / 90%);
 }
 
 :root.light-theme .navbar .logo {
     color: #b8860b;
     font-weight: 700;
-    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    text-shadow: 0 1px 2px rgb(0 0 0 / 10%);
 }
 
 :root.light-theme .hero-bg .bg-overlay {
-    background: linear-gradient(to bottom, rgba(242, 244, 247, 0.4) 0%, var(--bg-dark) 100%);
+    background: linear-gradient(to bottom, rgb(242 244 247 / 40%) 0%, var(--bg-dark) 100%);
 }
 
 :root.light-theme .zodiac-card {
-    background: linear-gradient(180deg, #ffffff 0%, #f2f4f7 100%);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    background: linear-gradient(180deg, #fff 0%, #f2f4f7 100%);
+    box-shadow: 0 5px 15px rgb(0 0 0 / 5%);
 }
 
 :root.light-theme .zodiac-card.active {
-    background: linear-gradient(180deg, #ffffff 0%, #e6eaf0 100%);
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1), 0 0 30px rgba(223, 181, 114, 0.3);
+    background: linear-gradient(180deg, #fff 0%, #e6eaf0 100%);
+    box-shadow: 0 15px 40px rgb(0 0 0 / 10%), 0 0 30px rgb(223 181 114 / 30%);
 }
 
 :root.light-theme .zodiac-card .icon {
-    background: rgba(255, 255, 255, 0.6);
-    border-color: rgba(0, 0, 0, 0.08);
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05), inset 0 0 0 1px rgba(255, 255, 255, 1);
+    background: rgb(255 255 255 / 60%);
+    border-color: rgb(0 0 0 / 8%);
+    box-shadow: 0 4px 15px rgb(0 0 0 / 5%), inset 0 0 0 1px rgb(255 255 255 / 100%);
 }
 
 :root.light-theme .zodiac-card.active .icon {
-    background: rgba(212, 163, 75, 0.15);
-    border-color: rgba(212, 163, 75, 0.4);
+    background: rgb(212 163 75 / 15%);
+    border-color: rgb(212 163 75 / 40%);
     text-shadow: none;
-    box-shadow: 0 4px 20px rgba(212, 163, 75, 0.15);
+    box-shadow: 0 4px 20px rgb(212 163 75 / 15%);
 }
 
 :root.light-theme .zodiac-card .date {
@@ -1678,7 +1669,7 @@ p {
 }
 
 :root.light-theme .insight-card.with-bg .card-overlay {
-    background: linear-gradient(to top, #ebedf2 0%, rgba(235, 237, 242, 0.4) 50%, transparent 100%);
+    background: linear-gradient(to top, #ebedf2 0%, rgb(235 237 242 / 40%) 50%, transparent 100%);
 }
 
 :root.light-theme .explore-sign,
@@ -1694,7 +1685,7 @@ p {
 
 .contact-header {
     max-width: 800px;
-    margin: 0 auto 4rem auto;
+    margin: 0 auto 4rem;
 }
 
 .contact-title {
@@ -1725,18 +1716,19 @@ p {
     border-radius: 12px;
     padding: 3rem 4rem;
     max-width: 900px;
+
     /* SAME AS MAP SECTION */
-    margin: 0 auto 3rem auto;
+    margin: 0 auto 3rem;
     display: flex;
     flex-direction: column;
     gap: 2.2rem;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 20px 40px rgb(0 0 0 / 20%);
 }
 
 :root.light-theme .contact-info-card {
-    background-color: #ffffff;
-    border-color: rgba(0, 0, 0, 0.1);
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.05);
+    background-color: #fff;
+    border-color: rgb(0 0 0 / 10%);
+    box-shadow: 0 15px 35px rgb(0 0 0 / 5%);
 }
 
 .info-row {
@@ -1748,7 +1740,7 @@ p {
 .icon-box {
     width: 52px;
     height: 52px;
-    background-color: rgba(230, 197, 135, 0.1);
+    background-color: rgb(230 197 135 / 10%);
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -1788,11 +1780,11 @@ p {
 .map-section {
     position: relative;
     max-width: 900px;
-    margin: 0 auto 4rem auto;
+    margin: 0 auto 4rem;
     border-radius: 12px;
     overflow: hidden;
     height: 400px;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 20px 40px rgb(0 0 0 / 20%);
 }
 
 .map-iframe {
@@ -1829,7 +1821,7 @@ p {
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 0 20px rgba(223, 181, 114, 0.4);
+    box-shadow: 0 0 20px rgb(223 181 114 / 40%);
     cursor: pointer;
     transition: var(--transition);
     pointer-events: auto;
@@ -1837,13 +1829,13 @@ p {
 
 .map-marker-btn:hover {
     transform: scale(1.1);
-    box-shadow: 0 0 30px rgba(223, 181, 114, 0.6);
+    box-shadow: 0 0 30px rgb(223 181 114 / 60%);
 }
 
 .map-overlay-content h4 {
-    color: #ffffff;
+    color: #fff;
     font-size: 1.3rem;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+    text-shadow: 0 2px 4px rgb(0 0 0 / 80%);
 }
 
 .btn-link {
@@ -1852,7 +1844,7 @@ p {
     letter-spacing: 1px;
     color: var(--gold-primary);
     text-transform: uppercase;
-    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8);
+    text-shadow: 0 1px 2px rgb(0 0 0 / 80%);
     pointer-events: auto;
 }
 
@@ -1881,7 +1873,7 @@ p {
 .feature-card:hover {
     background-color: var(--bg-card-hover);
     transform: translateY(-5px);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 10px 30px rgb(0 0 0 / 5%);
 }
 
 .feature-icon {
@@ -1912,7 +1904,7 @@ p {
     border: 1px solid var(--border-color);
     padding: 4rem 5rem;
     border-radius: 20px;
-    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 20px 50px rgb(0 0 0 / 30%);
     position: relative;
     overflow: hidden;
 }
@@ -1975,7 +1967,7 @@ p {
     margin-top: 2rem;
     margin-bottom: 1rem;
     padding-left: 1rem;
-    border-left: 3px solid rgba(223, 181, 114, 0.4);
+    border-left: 3px solid rgb(223 181 114 / 40%);
 }
 
 .legal-content p {
@@ -2031,8 +2023,8 @@ p {
 :root:not(.light-theme) .consultation-page {
     background-color: var(--bg-dark);
     background-image:
-        radial-gradient(circle at 10% 20%, rgba(230, 197, 135, 0.05) 0%, transparent 40%),
-        radial-gradient(circle at 90% 80%, rgba(168, 129, 251, 0.05) 0%, transparent 40%),
+        radial-gradient(circle at 10% 20%, rgb(230 197 135 / 5%) 0%, transparent 40%),
+        radial-gradient(circle at 90% 80%, rgb(168 129 251 / 5%) 0%, transparent 40%),
         url("assets/images/cosmic_nebula_bg.png");
     background-size: cover;
     background-attachment: fixed;
@@ -2040,8 +2032,8 @@ p {
 }
 
 :root:not(.light-theme) .consult-header {
-    background: linear-gradient(180deg, rgba(15, 16, 21, 1) 0%, rgba(20, 21, 26, 0.8) 100%);
-    border-bottom: 1px solid rgba(230, 197, 135, 0.1);
+    background: linear-gradient(180deg, rgb(15 16 21 / 100%) 0%, rgb(20 21 26 / 80%) 100%);
+    border-bottom: 1px solid rgb(230 197 135 / 10%);
 }
 
 :root:not(.light-theme) .consult-sub {
@@ -2050,7 +2042,7 @@ p {
 
 :root:not(.light-theme) .selection-h2 {
     color: var(--gold-primary);
-    text-shadow: 0 0 20px rgba(230, 197, 135, 0.2);
+    text-shadow: 0 0 20px rgb(230 197 135 / 20%);
 }
 
 :root:not(.light-theme) .selection-p {
@@ -2058,22 +2050,21 @@ p {
 }
 
 :root:not(.light-theme) .price-card {
-    background: rgba(30, 31, 38, 0.7);
+    background: rgb(30 31 38 / 70%);
     backdrop-filter: blur(15px);
-    -webkit-backdrop-filter: blur(15px);
-    border: 1px solid rgba(255, 255, 255, 0.05);
-    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
+    border: 1px solid rgb(255 255 255 / 5%);
+    box-shadow: 0 25px 50px rgb(0 0 0 / 50%);
 }
 
 :root:not(.light-theme) .price-card:hover {
     border-color: var(--gold-primary);
-    box-shadow: 0 0 40px rgba(230, 197, 135, 0.15);
+    box-shadow: 0 0 40px rgb(230 197 135 / 15%);
     transform: translateY(-8px);
 }
 
 :root:not(.light-theme) .price-card.premium {
-    background: linear-gradient(145deg, rgba(35, 36, 45, 0.8) 0%, rgba(20, 21, 26, 0.9) 100%);
-    border: 1.5px solid rgba(230, 197, 135, 0.4);
+    background: linear-gradient(145deg, rgb(35 36 45 / 80%) 0%, rgb(20 21 26 / 90%) 100%);
+    border: 1.5px solid rgb(230 197 135 / 40%);
 }
 
 :root:not(.light-theme) .card-name {
@@ -2081,7 +2072,7 @@ p {
 }
 
 :root:not(.light-theme) .card-time {
-    color: rgba(255, 255, 255, 0.5);
+    color: rgb(255 255 255 / 50%);
 }
 
 :root:not(.light-theme) .price-value {
@@ -2091,7 +2082,7 @@ p {
 :root:not(.light-theme) .details-h4,
 :root:not(.light-theme) .areas-h4 {
     color: var(--gold-primary);
-    border-bottom-color: rgba(230, 197, 135, 0.3);
+    border-bottom-color: rgb(230 197 135 / 30%);
 }
 
 :root:not(.light-theme) .price-label,
@@ -2100,9 +2091,9 @@ p {
 }
 
 :root:not(.light-theme) .area-tag {
-    background: rgba(255, 255, 255, 0.03);
+    background: rgb(255 255 255 / 3%);
     color: var(--gold-primary);
-    border-color: rgba(230, 197, 135, 0.2);
+    border-color: rgb(230 197 135 / 20%);
 }
 
 :root:not(.light-theme) .area-tag:hover {
@@ -2116,9 +2107,9 @@ p {
 
 /* Light Theme Enhancements for Legal Page */
 :root.light-theme .legal-container {
-    background-color: #ffffff;
-    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.06);
-    border-color: rgba(0, 0, 0, 0.08);
+    background-color: #fff;
+    box-shadow: 0 20px 50px rgb(0 0 0 / 6%);
+    border-color: rgb(0 0 0 / 8%);
 }
 
 :root.light-theme .legal-content h3 {
@@ -2185,15 +2176,17 @@ p {
     display: flex;
     transition: transform 0.6s ease-in-out;
     gap: 2rem;
+    will-change: transform;
 }
 
 .testimonial-card {
     flex: 0 0 calc(33.333% - 1.33rem);
+
     /* Show 3 by default */
     background-color: var(--bg-card);
     border: 1px solid var(--border-color);
     border-radius: 8px;
-    padding: 4.5rem 2.5rem 2.5rem 2.5rem;
+    padding: 4.5rem 2.5rem 2.5rem;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -2203,14 +2196,14 @@ p {
 .testimonial-card:hover {
     background-color: var(--bg-card-hover);
     transform: translateY(-8px);
-    border-color: rgba(223, 181, 114, 0.3);
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
+    border-color: rgb(223 181 114 / 30%);
+    box-shadow: 0 15px 35px rgb(0 0 0 / 25%);
 }
 
 .testimonial-card:hover .quote-mark {
     background-color: var(--gold-hover);
     transform: scale(1.1) translateY(3px);
-    box-shadow: 0 5px 15px rgba(223, 181, 114, 0.4);
+    box-shadow: 0 5px 15px rgb(223 181 114 / 40%);
 }
 
 .quote-mark {
@@ -2251,7 +2244,7 @@ p {
 .user-avatar {
     width: 45px;
     height: 45px;
-    background-color: rgba(255, 255, 255, 0.05);
+    background-color: rgb(255 255 255 / 5%);
     border-radius: 8px;
     display: flex;
     align-items: center;
@@ -2305,36 +2298,38 @@ p {
 
 /* Light theme overrides */
 :root.light-theme .testimonial-card {
-    background-color: #ffffff;
-    border-color: rgba(0, 0, 0, 0.08);
+    background-color: #fff;
+    border-color: rgb(0 0 0 / 8%);
 }
 
 :root.light-theme .testimonial-card:hover {
     background-color: #f2f4f7;
-    border-color: rgba(184, 134, 11, 0.2);
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+    border-color: rgb(184 134 11 / 20%);
+    box-shadow: 0 15px 35px rgb(0 0 0 / 8%);
 }
 
 :root.light-theme .quote-mark {
-    color: #ffffff;
+    color: #fff;
 }
 
 :root.light-theme .user-avatar {
     background-color: #f0f0f0;
     color: #4a4f63;
-    border-color: rgba(0, 0, 0, 0.1);
+    border-color: rgb(0 0 0 / 10%);
 }
 
-@media (max-width: 900px) {
+@media (width <= 900px) {
     .testimonial-card {
         flex: 0 0 calc(50% - 1rem);
+
         /* 2 items on tablet */
     }
 }
 
-@media (max-width: 600px) {
+@media (width <= 600px) {
     .testimonial-card {
         flex: 0 0 100%;
+
         /* 1 item on mobile */
     }
 
@@ -2362,13 +2357,14 @@ p {
     width: 62px;
     height: 62px;
     background-color: #25D366;
+
     /* Official WhatsApp Green */
-    color: #ffffff;
+    color: #fff;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+    box-shadow: 0 4px 15px rgb(37 211 102 / 40%);
     z-index: 1000;
     transition: transform 0.3s ease, box-shadow 0.3s ease, right 0.3s ease, bottom 0.3s ease;
     animation: popIn 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
@@ -2378,7 +2374,7 @@ p {
 
 .floating-whatsapp:hover {
     transform: scale(1.1) translateY(-5px);
-    box-shadow: 0 8px 25px rgba(37, 211, 102, 0.6);
+    box-shadow: 0 8px 25px rgb(37 211 102 / 60%);
 }
 
 @keyframes popIn {
@@ -2394,7 +2390,7 @@ p {
 }
 
 /* Enhanced Responsiveness & Mobile Polish */
-@media (max-width: 1024px) {
+@media (width <= 1024px) {
     .container {
         padding: 0 40px;
     }
@@ -2408,7 +2404,7 @@ p {
     }
 }
 
-@media (max-width: 768px) {
+@media (width <= 768px) {
     .container {
         padding: 0 25px;
     }
@@ -2424,21 +2420,20 @@ p {
         right: -100%;
         width: 85%;
         height: 100vh;
-        background: rgba(15, 16, 21, 0.98);
+        background: rgb(15 16 21 / 98%);
         backdrop-filter: blur(20px);
-        -webkit-backdrop-filter: blur(20px);
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         transition: right 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
         z-index: 1000;
-        box-shadow: -10px 0 30px rgba(0, 0, 0, 0.5);
+        box-shadow: -10px 0 30px rgb(0 0 0 / 50%);
     }
 
     :root.light-theme .nav-links {
-        background: rgba(255, 255, 255, 0.98);
-        box-shadow: -10px 0 30px rgba(0, 0, 0, 0.1);
+        background: rgb(255 255 255 / 98%);
+        box-shadow: -10px 0 30px rgb(0 0 0 / 10%);
     }
 
     .nav-links.active {
@@ -2559,7 +2554,7 @@ p {
 
     .hero {
         min-height: auto;
-        padding: 120px 0 60px 0;
+        padding: 120px 0 60px;
     }
 
     .hero-container {
@@ -2574,7 +2569,7 @@ p {
     }
 }
 
-@media (max-width: 480px) {
+@media (width <= 480px) {
     .container {
         padding: 0 15px;
     }
@@ -2640,7 +2635,7 @@ p {
     }
 }
 
-@media (max-width: 400px) {
+@media (width <= 400px) {
     .logo {
         font-size: 1rem;
     }
@@ -2658,14 +2653,9 @@ body {
     position: relative;
 }
 
-/* Fix for Testimonials overflow on mobile */
-.testimonials-track {
-    will-change: transform;
-}
 
 /* Fix for Hero Background Planets on Mobile */
-@media (max-width: 768px) {
-
+@media (width <= 768px) {
     .planet-1,
     .planet-2,
     .planet-3,
@@ -2675,6 +2665,7 @@ body {
     .planet-7,
     .planet-8 {
         opacity: 0.5;
+
         /* Reduce distraction on mobile */
     }
 }
@@ -2682,11 +2673,13 @@ body {
 /* ─── Consultation Page Redesign ────────────────────────────────────────── */
 .consultation-page {
     background-color: #fdfaf5;
+
     /* Warm cream background from image */
     min-height: 100vh;
     padding-top: 100px;
     padding-bottom: 5rem;
     color: #4a3427;
+
     /* Deep brown text */
 }
 
@@ -2701,14 +2694,14 @@ body {
 .consult-logo-wrap {
     width: 60px;
     height: 60px;
-    background: rgba(255, 255, 255, 0.05);
+    background: rgb(255 255 255 / 5%);
     border: 1.5px solid var(--gold-primary);
     border-radius: 50%;
     margin: 0 auto 1.5rem;
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 0 20px rgba(230, 197, 135, 0.3);
+    box-shadow: 0 0 20px rgb(230 197 135 / 30%);
 }
 
 .consult-logo-wrap svg {
@@ -2758,8 +2751,10 @@ body {
     border-radius: 4px;
     letter-spacing: 1.5px;
     margin-top: -1.5rem;
+
     /* Move orange badge up */
     margin-bottom: 3rem;
+
     /* Push 'Choose Your Reading' down */
     text-transform: uppercase;
 }
@@ -2790,22 +2785,22 @@ body {
 
 .price-card {
     background: white;
-    border: 1px solid rgba(140, 122, 107, 0.2);
+    border: 1px solid rgb(140 122 107 / 20%);
     border-radius: 8px;
     padding: 3.5rem 2.5rem;
     position: relative;
-    box-shadow: 0 15px 40px rgba(74, 52, 39, 0.05);
+    box-shadow: 0 15px 40px rgb(74 52 39 / 5%);
     transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
 .price-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 25px 50px rgba(74, 52, 39, 0.1);
+    box-shadow: 0 25px 50px rgb(74 52 39 / 10%);
     border-color: #e67232;
 }
 
 .price-card.premium {
-    border: 1px solid rgba(230, 197, 135, 0.3);
+    border: 1px solid rgb(230 197 135 / 30%);
     background: #fffdf9;
     overflow: hidden;
     display: flex;
@@ -2821,7 +2816,7 @@ body {
     width: 200%;
     height: 200%;
     background: conic-gradient(transparent,
-            rgba(168, 129, 251, 0.8),
+            rgb(168 129 251 / 80%),
             /* Purple for light theme */
             transparent 20%);
     animation: borderRotate 4s linear infinite;
@@ -2835,6 +2830,7 @@ body {
     position: absolute;
     inset: 3px;
     background: #fffdf9;
+
     /* Explicit light theme background */
     border-radius: 6px;
     z-index: 1;
@@ -2843,6 +2839,7 @@ body {
 
 :root:not(.light-theme) .price-card.premium::after {
     background: #14151a;
+
     /* Explicit dark theme background */
 }
 
@@ -2859,6 +2856,7 @@ body {
     top: 12px;
     right: -40px;
     background: #a881fb;
+
     /* Purple for light theme */
     color: #fff;
     font-size: 0.65rem;
@@ -2867,8 +2865,9 @@ body {
     transform: rotate(45deg);
     text-transform: uppercase;
     letter-spacing: 1px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 8px rgb(0 0 0 / 10%);
     z-index: 10;
+
     /* Above everything */
 }
 
@@ -2882,10 +2881,7 @@ body {
     }
 }
 
-:root:not(.light-theme) .price-card.premium {
-    background: linear-gradient(145deg, rgba(35, 36, 45, 0.9) 0%, rgba(20, 21, 26, 1) 100%);
-    border-color: rgba(230, 197, 135, 0.2);
-}
+
 
 :root:not(.light-theme) .price-card.premium::before {
     background: conic-gradient(transparent,
@@ -2930,7 +2926,7 @@ body {
     align-items: center;
     gap: 15px;
     padding-top: 1.8rem;
-    border-top: 1px dashed rgba(140, 122, 107, 0.3);
+    border-top: 1px dashed rgb(140 122 107 / 30%);
 }
 
 .price-label {
@@ -2965,7 +2961,7 @@ body {
     color: #e6c587;
     margin-bottom: 1.2rem;
     text-transform: uppercase;
-    border-bottom: 1px solid rgba(230, 197, 135, 0.2);
+    border-bottom: 1px solid rgb(230 197 135 / 20%);
     display: inline-block;
     padding-bottom: 4px;
 }
@@ -3026,7 +3022,7 @@ body {
     font-weight: 600;
     padding: 6px 14px;
     border-radius: 50px;
-    border: 1px solid rgba(230, 114, 50, 0.1);
+    border: 1px solid rgb(230 114 50 / 10%);
     transition: all 0.3s ease;
 }
 
@@ -3078,8 +3074,8 @@ body {
 :root:not(.light-theme) .puja-page {
     background: linear-gradient(135deg, #1a0f08 0%, #0d0602 100%);
     background-image: 
-        radial-gradient(circle at 20% 30%, rgba(230, 197, 135, 0.05) 0%, transparent 40%),
-        radial-gradient(circle at 80% 70%, rgba(168, 129, 251, 0.05) 0%, transparent 40%);
+        radial-gradient(circle at 20% 30%, rgb(230 197 135 / 5%) 0%, transparent 40%),
+        radial-gradient(circle at 80% 70%, rgb(168 129 251 / 5%) 0%, transparent 40%);
 }
 
 .puja-container {
@@ -3103,7 +3099,7 @@ body {
     letter-spacing: 2px;
     border-radius: 4px;
     margin-bottom: 1.5rem;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    box-shadow: 0 4px 10px rgb(0 0 0 / 20%);
 }
 
 .puja-h1 {
@@ -3111,7 +3107,7 @@ body {
     color: var(--gold-primary);
     margin-bottom: 1rem;
     letter-spacing: 2px;
-    text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+    text-shadow: 0 2px 10px rgb(0 0 0 / 30%);
 }
 
 .puja-sub {
@@ -3133,8 +3129,8 @@ body {
 }
 
 .puja-card {
-    background: rgba(255, 255, 255, 0.03);
-    border: 1px solid rgba(230, 197, 135, 0.1);
+    background: rgb(255 255 255 / 3%);
+    border: 1px solid rgb(230 197 135 / 10%);
     border-radius: 12px;
     padding: 2rem;
     display: flex;
@@ -3145,17 +3141,17 @@ body {
 }
 
 .puja-card:hover {
-    background: rgba(255, 255, 255, 0.06);
+    background: rgb(255 255 255 / 6%);
     border-color: var(--gold-primary);
     transform: translateY(-5px);
-    box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+    box-shadow: 0 10px 30px rgb(0 0 0 / 40%);
 }
 
 .puja-icon {
     width: 65px;
     height: 65px;
     flex-shrink: 0;
-    filter: drop-shadow(0 0 12px rgba(223, 181, 114, 0.4));
+    filter: drop-shadow(0 0 12px rgb(223 181 114 / 40%));
 }
 
 .puja-deity-img {
@@ -3163,7 +3159,7 @@ body {
     height: 100%;
     object-fit: cover;
     border-radius: 50%;
-    border: 1px solid rgba(230, 197, 135, 0.3);
+    border: 1px solid rgb(230 197 135 / 30%);
 }
 
 .puja-info h3 {
@@ -3183,8 +3179,8 @@ body {
 
 /* Booking Strip */
 .puja-booking-strip {
-    background: rgba(179, 139, 77, 0.1);
-    border: 1px solid rgba(179, 139, 77, 0.2);
+    background: rgb(179 139 77 / 10%);
+    border: 1px solid rgb(179 139 77 / 20%);
     border-radius: 12px;
     padding: 2rem 3rem;
     display: flex;
@@ -3197,13 +3193,13 @@ body {
 
 .puja-booking-strip:hover {
     border-color: var(--gold-primary);
-    background: rgba(179, 139, 77, 0.15);
+    background: rgb(179 139 77 / 15%);
 }
 
 .puja-call-icon {
     width: 60px;
     height: 60px;
-    background: rgba(58, 211, 102, 0.1); /* Subtle green hint */
+    background: rgb(58 211 102 / 10%); /* Subtle green hint */
     color: #25D366;
     border-radius: 50%;
     display: flex;
@@ -3255,7 +3251,7 @@ body {
     content: '';
     position: absolute;
     top: 0; left: 0; width: 100%; height: 100%;
-    background: radial-gradient(circle at top right, rgba(255, 157, 0, 0.1), transparent 40%);
+    background: radial-gradient(circle at top right, rgb(255 157 0 / 10%), transparent 40%);
     pointer-events: none;
 }
 
@@ -3272,15 +3268,15 @@ body {
 }
 
 :root.light-theme .puja-card {
-    background: #ffffff;
-    border: 1px solid rgba(230, 114, 50, 0.4); /* Much more visible border */
-    box-shadow: 0 4px 20px rgba(230, 114, 50, 0.1);
+    background: #fff;
+    border: 1px solid rgb(230 114 50 / 40%); /* Much more visible border */
+    box-shadow: 0 4px 20px rgb(230 114 50 / 10%);
 }
 
 :root.light-theme .puja-card:hover {
     border-color: #e67232;
     background: #fffdfa;
-    box-shadow: 0 10px 40px rgba(230, 114, 50, 0.15);
+    box-shadow: 0 10px 40px rgb(230 114 50 / 15%);
 }
 
 :root.light-theme .puja-info h3 {
@@ -3295,9 +3291,9 @@ body {
 }
 
 :root.light-theme .puja-booking-strip {
-    background: #ffffff;
-    border-color: rgba(230, 114, 50, 0.2);
-    box-shadow: 0 10px 40px rgba(230, 114, 50, 0.05);
+    background: #fff;
+    border-color: rgb(230 114 50 / 20%);
+    box-shadow: 0 10px 40px rgb(230 114 50 / 5%);
 }
 
 :root.light-theme .puja-phone-link {
@@ -3310,7 +3306,7 @@ body {
 }
 
 /* Responsive */
-@media (max-width: 768px) {
+@media (width <= 768px) {
     .pricing-grid {
         grid-template-columns: 1fr;
     }
@@ -3328,6 +3324,7 @@ body {
     }
 
     .puja-h1 { font-size: 2.2rem; }
+
     .puja-booking-strip {
         flex-direction: column;
         padding: 2.5rem 1.5rem;
