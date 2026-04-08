@@ -12,10 +12,13 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap"
-        rel="stylesheet">
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
     <link rel="stylesheet" href="css/styles.css">
+
+    <!-- Scripts (Deferred for better TTI) -->
+    <script src="js/i18n.js" defer></script>
+    <script src="js/scripts.js" defer></script>
 </head>
 
 <body>
@@ -109,7 +112,7 @@
                 <!-- Item 1: Mahadev -->
                 <div class="puja-card">
                     <div class="puja-icon">
-                        <img src="assets/images/shiva_icon.png" alt="Lord Shiva" class="puja-deity-img">
+                        <img src="assets/images/shiva_icon.png" alt="Lord Shiva" class="puja-deity-img" loading="lazy">
                     </div>
                     <div class="puja-info">
                         <h3 data-i18n="bp_item_1_h">LORD MAHADEV</h3>
@@ -120,7 +123,7 @@
                 <!-- Item 2: Hanuman Ji -->
                 <div class="puja-card">
                     <div class="puja-icon">
-                        <img src="assets/images/hanuman_icon.png" alt="Hanuman Ji" class="puja-deity-img">
+                        <img src="assets/images/hanuman_icon.png" alt="Hanuman Ji" class="puja-deity-img" loading="lazy">
                     </div>
                     <div class="puja-info">
                         <h3 data-i18n="bp_item_2_h">HANUMAN JI</h3>
@@ -131,7 +134,7 @@
                 <!-- Item 3: Mata Laxmi -->
                 <div class="puja-card">
                     <div class="puja-icon">
-                        <img src="assets/images/laxmi_icon.png" alt="Mata Laxmi" class="puja-deity-img">
+                        <img src="assets/images/laxmi_icon.png" alt="Mata Laxmi" class="puja-deity-img" loading="lazy">
                     </div>
                     <div class="puja-info">
                         <h3 data-i18n="bp_item_3_h">MATA LAXMI</h3>
@@ -142,7 +145,7 @@
                 <!-- Item 4: Ganapati -->
                 <div class="puja-card">
                     <div class="puja-icon">
-                        <img src="assets/images/ganesha_icon.png" alt="Lord Ganesha" class="puja-deity-img">
+                        <img src="assets/images/ganesha_icon.png" alt="Lord Ganesha" class="puja-deity-img" loading="lazy">
                     </div>
                     <div class="puja-info">
                         <h3 data-i18n="bp_item_4_h">GANAPATI</h3>
@@ -153,7 +156,7 @@
                 <!-- Item 5: Shri Jagannath -->
                 <div class="puja-card">
                     <div class="puja-icon">
-                        <img src="assets/images/jagannath_icon.png" alt="Shri Jagannath" class="puja-deity-img">
+                        <img src="assets/images/jagannath_icon.png" alt="Shri Jagannath" class="puja-deity-img" loading="lazy">
                     </div>
                     <div class="puja-info">
                         <h3 data-i18n="bp_item_5_h">SHRI JAGANNATH</h3>
@@ -269,8 +272,7 @@
         </svg>
     </a>
 
-    <script src="js/i18n.js"></script>
-    <script src="js/scripts.js"></script>
+    </a>
 </body>
 
 </html>

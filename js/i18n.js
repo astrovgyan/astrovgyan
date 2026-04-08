@@ -553,10 +553,18 @@
         });
     }
 
-    // Run after DOM is ready
+    // Run after DOM is ready, but in a non-blocking way to improve TTI
+    const scheduleInit = () => {
+        if (window.requestIdleCallback) {
+            window.requestIdleCallback(() => initPicker());
+        } else {
+            setTimeout(initPicker, 1);
+        }
+    };
+
     if (document.readyState === 'loading') {
-        document.addEventListener('DOMContentLoaded', initPicker);
+        document.addEventListener('DOMContentLoaded', scheduleInit);
     } else {
-        initPicker();
+        scheduleInit();
     }
 })();
